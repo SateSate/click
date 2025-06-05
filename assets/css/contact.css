@@ -1,0 +1,263 @@
+body {
+  background-color: #3a3939;
+  color: #fff;
+}
+
+/* Contact Container */
+.contact-container {
+  margin-top: 5em;
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+.contact-wrapper {
+  display: flex;
+  gap: 60px;
+}
+
+/* Right Content - Form */
+.contact-form-wrapper {
+  flex: 1;
+  padding: 15px 0;
+}
+
+.contact-form {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.form-group.half {
+  flex: 1;
+}
+
+.main-label {
+  color: #7f7f7f;
+  text-align: left;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+  font-family: Outfit, sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 29px;
+  display: block;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+/* Pill Options */
+.option-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.option-pill {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.option-pill input[type='checkbox'] {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.pill-text {
+  display: inline-block;
+  padding: 10px 24px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+/* Normal state */
+.option-pill .pill-text {
+  color: #ffffff;
+}
+
+/* Hover state */
+.option-pill:hover .pill-text {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Selected state */
+.option-pill input:checked + .pill-text {
+  background-color: #ffffff;
+  color: #191919;
+}
+
+/* Form Fields */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 15px 0;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+/* Submit Button */
+.submit-button {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+  padding: 16px 32px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.submit-button span {
+  margin-right: 10px;
+}
+
+.arrow-icon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow-image {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #ffffff;
+  color: #191919;
+}
+
+.submit-button:hover .arrow-image {
+  transform: translate(3px, -3px);
+}
+
+@media (max-width: 767px) {
+  .contact-container {
+    padding: 60px 15px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .option-pills {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .option-pill {
+    width: 100%;
+    text-align: center;
+  }
+
+  .pill-text {
+    width: 100%;
+  }
+}
+
+.contact-block.white {
+  background-color: #fff;
+  border-radius: 20px;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-self: stretch;
+  align-items: flex-start;
+  width: 30em;
+  height: auto;
+  padding: 1.5em;
+  display: flex;
+}
+
+.contact-title {
+  margin-bottom: 0.6em;
+}
+
+.h2-big-text.grey.contact {
+  font-size: 3em;
+}
+
+.category {
+  color: #7f7f7f;
+  letter-spacing: 0;
+  cursor: default;
+  flex: none;
+  width: auto;
+  font-family: Outfit, sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.5em;
+  display: block;
+}
+
+.contacts {
+  margin-top: 2em;
+}
+
+.address {
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 0.8em;
+  text-decoration: none;
+  display: flex;
+}
+
+.icon {
+  width: 2em;
+  height: 2em;
+  margin-right: 0.8em;
+  display: flex;
+}
+
+.category.dark {
+  color: #3a3939;
+}
+
+.icon-1 {
+  width: 100%;
+  height: 100%;
+}
+
+.pos-relative:hover .button-submit {
+  border-color: rgb(196, 193, 247);
+  background-color: rgb(196, 193, 247);
+  color: rgb(255, 255, 255);
+}

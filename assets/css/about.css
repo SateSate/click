@@ -1,0 +1,1081 @@
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: 80px 0;
+}
+
+.section-title {
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+/* Services Section */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.subtitle {
+  margin-top: -20px;
+  margin-bottom: 40px;
+  color: #666;
+}
+
+.services {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-item {
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 10px 0;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.showreel-container {
+  position: relative;
+}
+
+.video-wrapper {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.video-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.play-button button {
+  background-color: #5f5fff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 100px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.play-button button:hover {
+  background-color: #4a4ad7;
+}
+
+.creativity-overlay {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  transform: translateY(-50%);
+  font-size: 5rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  letter-spacing: 5px;
+}
+
+/* Workspace Section */
+.workspace-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.workspace-image {
+  border-radius: 12px;
+  overflow: hidden;
+  height: 380px;
+}
+
+.workspace-image:first-child {
+  grid-column: 1 / 3;
+}
+
+.workspace-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .agency-content,
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-number {
+    font-size: 3rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .creativity-overlay {
+    font-size: 3rem;
+  }
+}
+
+/* Team Section */
+.team-section {
+  padding: 120px 0;
+  background-color: #f9f9f9;
+  overflow: hidden;
+}
+
+.team-description {
+  max-width: 900px;
+  margin-bottom: 100px;
+  font-size: 1.3rem;
+  line-height: 1.6;
+}
+
+/* Craft heading with animation styles */
+.craft-heading-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  margin-bottom: 100px;
+}
+
+.craft-heading {
+  font-size: 7rem;
+  font-weight: 700;
+  white-space: nowrap;
+  position: absolute;
+  color: #111;
+  will-change: transform;
+  transform: translateX(40%); /* Start position (half visible) */
+}
+
+/* Services Cards */
+.services-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.service-card {
+  position: relative;
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(30px);
+  border: 2px solid #111;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border: 2px solid #5d5df7;
+}
+
+.card-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  z-index: -1;
+}
+
+.service-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.service-card p {
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.card-stat {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.stat-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-card:nth-child(1) .stat-circle {
+  background-color: #5d5df7;
+}
+
+.stat-value {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.stat-label {
+  color: #555;
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .craft-heading {
+    font-size: 5rem;
+  }
+
+  .services-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .team-description {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .craft-heading {
+    font-size: 3rem;
+  }
+
+  .craft-heading-container {
+    height: 100px;
+  }
+}
+
+/* Scroll indicator styling */
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(8px);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.step-header {
+  grid-column: 1;
+  grid-row: 1;
+  padding: 120px 0 0 10%; /* Increased top padding to move it higher */
+}
+
+.step-content {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  padding: 120px 10% 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  pointer-events: auto;
+}
+
+.step-number {
+  font-size: 1rem;
+  color: #5d5df7;
+  margin-bottom: 10px;
+}
+
+.step-subtitle {
+  font-size: 1.2rem;
+  color: #5d5df7;
+  margin-bottom: 10px;
+}
+
+.step-title {
+  font-size: 4.5rem;
+  font-weight: 600;
+  margin-bottom: 40px;
+  line-height: 1.1;
+}
+
+.step-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.step-description p {
+  margin-bottom: 20px;
+}
+
+/* Partnership Section */
+.partnership-section {
+  background-color: #f8f8f8;
+  padding: 120px 0;
+  overflow: hidden;
+}
+
+.partnership-content {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.partnership-intro {
+  max-width: 840px;
+}
+
+.partnership-description {
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-top: 30px;
+}
+
+.client-testimonial {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.trust-badge {
+  padding-top: 20px;
+}
+
+.trust-badge p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.trust-logos {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.client-logo {
+  height: 40px;
+  width: auto;
+  opacity: 0.9;
+  filter: grayscale(100%);
+  transition: all 0.3s;
+}
+
+.client-logo:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+.testimonial-content p {
+  font-size: 1.3rem;
+  line-height: 1.7;
+  color: #222;
+}
+
+.global-partners {
+  margin-top: 20px;
+}
+
+.global-partners h3 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 1.3;
+  max-width: 840px;
+  margin-bottom: 80px;
+}
+
+.partners-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.partner-logo {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  opacity: 0.7;
+  filter: grayscale(100%);
+  transition: all 0.3s;
+}
+
+.partner-logo:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+.partner-img {
+  height: 100%;
+  width: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .client-testimonial {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .partnership-description,
+  .global-partners h3 {
+    font-size: 2rem;
+  }
+
+  .partners-logos {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .partnership-section {
+    padding: 80px 0;
+  }
+
+  .partnership-content {
+    gap: 60px;
+  }
+
+  .partnership-description,
+  .global-partners h3 {
+    font-size: 1.8rem;
+  }
+
+  .testimonial-content p {
+    font-size: 1.1rem;
+  }
+}
+
+.bg-dark {
+  background-color: #111;
+  color: #fff;
+}
+
+.connection {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media (min-width: 576px) {
+  .connection {
+    padding-top: calc(120px + 120 * (100vw - 576px) / 1024);
+    padding-bottom: calc(120px + 120 * (100vw - 576px) / 1024);
+  }
+}
+
+.inner {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.connection-header {
+  text-align: center;
+  max-width: 220px;
+  margin: auto;
+}
+
+@media (min-width: 576px) {
+  .connection-header {
+    max-width: 40.5vw;
+  }
+}
+
+@media (min-width: 1025px) {
+  .connection-header {
+    max-width: 32.5vw;
+  }
+}
+
+.grid-connection {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 2rem;
+  background-image: -webkit-radial-gradient(
+    50% 50%,
+    circle,
+    rgba(84, 92, 255, 0.3) 0,
+    transparent 30%
+  );
+  background-image: -o-radial-gradient(
+    50% 50%,
+    circle,
+    rgba(84, 92, 255, 0.3) 0,
+    transparent 30%
+  );
+  background-image: radial-gradient(
+    circle at 50%,
+    at 50%,
+    rgba(84, 92, 255, 0.3) 0,
+    transparent 30%
+  );
+  background-image: radial-gradient(
+    circle at 50% 50%,
+    rgba(84, 92, 255, 0.3) 0,
+    transparent 30%
+  );
+  margin-left: auto;
+  margin-right: auto;
+  grid-gap: 40px;
+  gap: 40px;
+}
+
+@media (min-width: 576px) {
+  .grid-connection {
+    margin-top: calc(32px + 88 * (100vw - 576px) / 1024);
+  }
+}
+
+@media (min-width: 768px) {
+  .grid-connection {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1025px) {
+  .grid-connection {
+    background-image: -webkit-radial-gradient(
+      50% 50%,
+      circle,
+      rgba(84, 92, 255, 0.3) 0,
+      transparent 65%
+    );
+    background-image: -o-radial-gradient(
+      50% 50%,
+      circle,
+      rgba(84, 92, 255, 0.3) 0,
+      transparent 65%
+    );
+    background-image: radial-gradient(
+      circle at 50%,
+      at 50%,
+      rgba(84, 92, 255, 0.3) 0,
+      transparent 65%
+    );
+    background-image: radial-gradient(
+      circle at 50% 50%,
+      rgba(84, 92, 255, 0.3) 0,
+      transparent 65%
+    );
+    max-width: 1120px;
+  }
+}
+
+.grid-connection .grid-item:first-child,
+.grid-connection .grid-item:nth-child(2),
+.grid-connection .grid-item:nth-child(3),
+.grid-connection .grid-item:nth-child(7),
+.grid-connection .grid-item:nth-child(8),
+.grid-connection .grid-item:nth-child(9) {
+  display: none !important;
+}
+
+@media (min-width: 768px) {
+  .grid-connection .grid-item:first-child,
+  .grid-connection .grid-item:nth-child(2),
+  .grid-connection .grid-item:nth-child(3),
+  .grid-connection .grid-item:nth-child(7),
+  .grid-connection .grid-item:nth-child(8),
+  .grid-connection .grid-item:nth-child(9) {
+    display: -webkit-box !important;
+    display: -webkit-flex !important;
+    display: flex !important
+;
+  }
+}
+
+@media (min-width: 1025px) {
+  .grid-connection .grid-item.item1,
+  .grid-connection .grid-item.item2,
+  .grid-connection .grid-item.item3 {
+    z-index: 6;
+  }
+}
+
+@media (min-width: 1025px) {
+  .grid-connection .grid-item.item4 {
+    z-index: 9;
+  }
+}
+
+@media (min-width: 1025px) {
+  .grid-connection .grid-item.item6,
+  .grid-connection .grid-item.item7 {
+    z-index: 8;
+  }
+}
+
+@media (min-width: 1025px) {
+  .grid-connection .grid-item.item8,
+  .grid-connection .grid-item.item9 {
+    z-index: 7;
+  }
+}
+
+.image-box {
+  overflow: hidden;
+  position: relative;
+  border-radius: 16px;
+}
+
+@media (min-width: 576px) {
+  .image-box,
+  .image-paralax,
+  .image-paralax-in,
+  .video-box,
+  .video-box-in,
+  .video-modal,
+  .video-modal-in {
+    border-radius: calc(16px + 16 * (100vw - 576px) / 1024);
+  }
+}
+
+.group-floating {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 1rem;
+}
+
+@media (min-width: 1025px) {
+  .group-floating {
+    margin: 2rem;
+  }
+}
+
+.grid-connection .btn {
+  padding: 0 24px;
+  font-weight: 500;
+  box-shadow: 0 0 0 0 #71777e;
+  border: 1px solid #71777e;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  border-radius: 100px;
+  cursor: pointer;
+  position: relative;
+  height: 40px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  overflow: hidden;
+  text-decoration: none;
+  grid-gap: 0.5rem;
+  gap: 0.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+@media (min-width: 1025px) {
+  .grid-connection .btn,
+  .btn.fill {
+    -webkit-transition: box-shadow 0.3s ease;
+    -o-transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease;
+  }
+}
+
+.grid-connection .btn:not(.fill) {
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+}
+
+.grid-connection .btn.label {
+  cursor: default;
+}
+
+.connection .label {
+  z-index: 2;
+  box-shadow: none;
+  border: none !important;
+}
+
+.connection .label-facebook {
+  background-color: #1877f2;
+}
+
+.btn .value {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  height: 100%;
+}
+
+.grid-connection-over .btn .icon,
+.grid-connection-over .btn .value {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.connection .label .value {
+  color: #fff;
+}
+
+.grid-connection-over .group-floating .label:not(.label-awwwards) .value {
+  text-transform: capitalize;
+}
+
+.grid-connection-over .image,
+.image-paralax {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.grid-connection-over figure.image,
+figure.image img {
+  width: 100%;
+}
+
+.grid-connection-over .image.squere-r {
+  aspect-ratio: 1;
+}
+
+@media (min-width: 1025px) {
+  .grid-connection-over figure.image img {
+    -webkit-transform: scale(1.15);
+    -o-transform: scale(1.15);
+    transform: scale(1.15);
+  }
+}
+
+.grid-connection-over .image.squere-r img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+/* ========================================================================
+   “Our Processes” Section — COMPLETE, CORRECTED CSS
+   ======================================================================== */
+
+/* ===================================================
+   1) WRAPPING CONTAINER & SECTION LAYOUT
+   =================================================== */
+/* Ensure the section can pin correctly */
+.sticky-over {
+  position: relative;
+  overflow: hidden;
+}
+.sticky-over section {
+  min-height: 100vh;
+}
+
+/* ===================================================
+   2) DARK BACKGROUND + BOTTOM RADIAL GRADIENT
+   =================================================== */
+.bg-dark {
+  background-color: #111;
+  color: #fff;
+}
+.bg-gradient-bottom {
+  background-image: -webkit-radial-gradient(
+    75% 140%,
+    circle,
+    #545cff 0,
+    transparent 35%
+  );
+  background-image: -o-radial-gradient(
+    75% 140%,
+    circle,
+    #545cff 0,
+    transparent 35%
+  );
+  background-image: radial-gradient(
+    circle at 75% 140%,
+    #545cff 0,
+    transparent 35%
+  );
+}
+section.nogap {
+  padding: 0 !important;
+}
+.inner.gap-bottom {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 60px;
+}
+
+/* ===================================================
+   3) STICKY SCROLL-RAIL (RIGHT SIDE)
+   =================================================== */
+/* Outer container for the vertical scroll indicator */
+.sticky-scroll {
+  position: absolute;
+  top: 0;
+  right: 2.625vw;
+  width: 8px;
+  height: 100vh;
+  display: flex; /* Always visible on desktop */
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+/* The “track” itself (light gray) */
+.custom-scroll-el {
+  background: hsla(0, 0%, 100%, 0.1);
+  width: 8px;
+  height: 200px; /* Defines the length of the track */
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* The “thumb” (blue bar) that grows as you scroll */
+.custom-scroll-el-scroller {
+  background: #545cff;
+  width: 100%;
+  height: 0; /* Start at 0 so we can animate up to full height */
+  border-radius: 16px;
+  transform-origin: top;
+}
+
+/* ===================================================
+   4) “KEEP SCROLLING” INDICATOR
+   =================================================== */
+/* Container for the loader text + spinner */
+.scroll-sticky-element {
+  position: absolute;
+  top: 85vh;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block; /* Visible on desktop */
+  z-index: 9;
+}
+
+/* Gray “Keep scrolling” text + spinner */
+.circle-loader-text.gray {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  color: #71777e;
+
+  /* Start hidden + moved down, to animate up + fade in */
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.circle-loader {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  border-top-color: hsla(0, 0%, 100%, 0);
+  animation: circle-loader-spin 1s linear infinite;
+}
+
+@keyframes circle-loader-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.value {
+  font-size: 16px;
+}
+
+/* ===================================================
+   5) GRID LAYOUT FOR EACH PROCESS–ITEM
+   =================================================== */
+.process {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column by default (mobile) */
+  gap: 0;
+}
+
+/* Left column container */
+.process-side {
+  max-width: 100%; /* Full width on mobile */
+}
+
+/* The “sticky” container inside left side */
+.process-side-sticky {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.process-side-sticky * {
+  margin: 0 !important;
+}
+
+/* Small gray label “Our Process 0X” */
+.text-color-grayDark {
+  color: #71777e;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* Gradient subheading (<div class="h4 text-gradient">) */
+.text-gradient,
+.text-gradient > div {
+  background: -webkit-linear-gradient(45deg, #545cff, #8d95ff 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.text-gradient {
+  font-weight: 600;
+  font-size: 24px;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+
+/* Main title (<div class="h2">) */
+.h2 {
+  font-weight: 600;
+  font-size: 30px;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  line-height: 1.4;
+  overflow: hidden;
+}
+
+/* Right‐column content paragraphs */
+.process-content {
+  padding-right: 5.625vw;
+}
+
+.process-content p {
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+/* Spacing around each step */
+.process-item {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.process-item:not(:last-child) {
+  margin-bottom: 120px;
+}
+
+/* ===================================================
+   6) DESKTOP (MIN-WIDTH: 1025px) OVERRIDES
+   =================================================== */
+@media (min-width: 1025px) {
+  /* Two-column grid on desktop: left sticky, right content */
+  .process {
+    grid-template-columns: 1fr 1.25fr;
+    gap: 40px;
+  }
+  /* Left side narrower to leave room for content */
+  .process-side {
+    max-width: 70%;
+  }
+  /* Larger vertical padding per step */
+  .process-item {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .process-item:not(:last-child) {
+    margin-bottom: 120px;
+  }
+
+  /* Show scroll-rail and loader on desktop */
+  .sticky-scroll {
+    display: flex;
+  }
+  .scroll-sticky-element {
+    display: block;
+  }
+
+  /* Responsive <h4> sizing */
+  @media (min-width: 576px) {
+    .text-gradient {
+      font-size: calc(24px + 8 * (100vw - 576px) / 1024);
+    }
+  }
+  @media (max-width: 575px) {
+    .text-gradient {
+      font-size: 24px;
+    }
+  }
+}
+
+/* ===================================================
+   7) RESPONSIVE TYPOGRAPHY BELOW DESKTOP
+   =================================================== */
+@media (max-width: 700px) {
+  .h2 {
+    font-size: 24px;
+  }
+  .text-gradient {
+    font-size: 20px;
+  }
+}
+
+/* ===================================================
+   8) RESET ANY EXTRA MARGINS ON HEADINGS
+   =================================================== */
+body .h2,
+body .h2,
+body h2,
+body h2,
+body .h4,
+body .h4,
+body h4,
+body h4 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
