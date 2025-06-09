@@ -153,7 +153,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // Create a parallax effect by moving the work section slightly faster than scroll
     if (footer && workSection) {
       gsap.to(workSection, {
-        yPercent: -15, // Adjust this value to control parallax intensity
         ease: 'none',
         scrollTrigger: {
           trigger: footer,
