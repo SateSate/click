@@ -297,7 +297,7 @@ a {
 
 .b-menu {
   z-index: 3;
-  background-color: #fff;
+  background-color: #ffffff61;
   transform-origin: 100% 0;
   border-radius: 20px;
   display: block;
@@ -309,6 +309,8 @@ a {
   transform-style: preserve-3d;
   opacity: 0;
   transition: transform 0.5s ease, opacity 0.5s ease;
+  -webkit-backdrop-filter: blur(60px);
+    backdrop-filter: blur(60px);
 }
 
 .b-menu.active {
@@ -373,7 +375,9 @@ a {
   align-items: center;
   padding-bottom: 0.5em;
   transition: background-color 0.5s ease, border-color 0.5s ease;
-  background-color: #c8c8c8bd;
+  background-color: #c8c8c800;
+  -webkit-backdrop-filter: blur(60px);
+    backdrop-filter: blur(60px);
 }
 
 .button.main:hover {
@@ -555,6 +559,7 @@ a {
   position: absolute;
   top: 0;
   width: 100%;
+  object-position: top center;
 }
 @media (max-width: 768px) {
   .servCardW {
